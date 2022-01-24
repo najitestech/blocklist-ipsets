@@ -6,4 +6,4 @@ while read -r ip
         else
             printf '%s\n' 'IP Not Found'
         fi
-    done < ./
+    done < ./bambenek_banjori.ipset
