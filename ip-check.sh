@@ -1,9 +1,21 @@
-while read -r ip
-    do
-        if [[ $ip == "$1" ]]; then
-            shift
-            printf '%s\n' 'This IP is in the List'
-        else
-            printf '%s\n' 'IP Not Found'
-        fi
-    done < ./bambenek_banjori.ipset
+#!/bin/bash
+
+echo "Pulling repo from GitHub"
+git pull origin kikpeni
+
+echo "What's the IP ?"
+read IP
+
+if grep -Fxq "$IP" ./bambenek_*
+then
+	    echo "IP Exist"
+    else
+	        echo "IP not found, Exiting Now ...."
+		exit
+fi
+
+git add .
+git commit -m "Pushing repo back to GitHub"
+
+echo "Pushing repo back to GitHub"
+git push origin kikpeni
