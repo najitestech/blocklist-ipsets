@@ -14,6 +14,7 @@ then
 	    echo "IP Exist"
     else
 	        echo "IP not found, Exiting Now ...."
+		echo "Adding new IP '$IP' to the list"
 		echo "$IP" >> new-iplist.txt
 fi
 
