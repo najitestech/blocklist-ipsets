@@ -1,5 +1,8 @@
 #!/bin/bash
 
+git config --global user.email "najitestech@gmail.com"
+git config --global user.name "Kelvin Ikpeni"
+
 echo "Pulling repo from GitHub"
 git pull origin kikpeni
 
