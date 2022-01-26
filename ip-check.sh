@@ -14,7 +14,7 @@ then
 	    echo "IP Exist"
     else
 	        echo "IP not found, Exiting Now ...."
-		exit
+		echo "$IP" >> new-iplist.txt
 fi
 
 git add .
