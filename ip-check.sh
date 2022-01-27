@@ -28,4 +28,5 @@ echo "Pushing repo back to GitHub"
 git push origin kikpeni
 
 #Save a copy of new iplist file to S3 bucket
+echo "Copying $file_name.txt to s3 bucket"
 aws s3 cp $file_name.txt s3://iplist-test
