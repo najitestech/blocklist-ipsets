@@ -9,9 +9,10 @@ git pull origin kikpeni
 echo "What's the IP ?"
 read IP
 
-if grep -Fxq "$IP" ./bambenek_*
+if grep $IP * -lR
 then
-	    echo "IP Exist in ./bambenek_*"
+	echo "IP Exist in the above file (s)"
+	    exit
     else
 	        echo "IP not found, Exiting Now ...."
 		echo "Adding new IP '$IP' to the list"
