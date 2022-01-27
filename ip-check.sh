@@ -17,8 +17,8 @@ then
 	    exit
     else
 	        echo "IP not found"
-		echo "Adding new IP '$IP' to the list "$file_name.txt""
-		echo "$IP" >> $file_name.txt
+		echo "Adding new IP '$IP' to the list '$file_name.txt'"
+		echo "$IP" > $file_name.txt
 fi
 
 git add .
