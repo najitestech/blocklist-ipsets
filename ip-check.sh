@@ -18,7 +18,7 @@ then
     else
 	        echo "IP not found"
 		echo "Adding new IP '$IP' to the list '$file_name.txt'"
-		echo "$IP" > $file_name.txt
+		echo "$IP" >> $file_name.txt
 fi
 
 git add .
@@ -26,3 +26,6 @@ git commit -m "Pushing repo back to GitHub"
 
 echo "Pushing repo back to GitHub"
 git push origin kikpeni
+
+#Save a copy of new iplist file to S3 bucket
+aws s3 cp $file_name.txt s3://iplist-test
