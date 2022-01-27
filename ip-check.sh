@@ -11,7 +11,7 @@ read IP
 
 if grep -Fxq "$IP" ./bambenek_*
 then
-	    echo "IP Exist"
+	    echo "IP Exist in ./bambenek_*"
     else
 	        echo "IP not found, Exiting Now ...."
 		echo "Adding new IP '$IP' to the list"
