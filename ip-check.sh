@@ -1,5 +1,7 @@
 #!/bin/bash
 
+file_name=new-iplist
+
 git config --global user.email "najitestech@gmail.com"
 git config --global user.name "Kelvin Ikpeni"
 
@@ -14,9 +16,9 @@ then
 	echo "IP Exist in the above file (s)"
 	    exit
     else
-	        echo "IP not found, Exiting Now ...."
-		echo "Adding new IP '$IP' to the list"
-		echo "$IP" >> new-iplist.txt
+	        echo "IP not found"
+		echo "Adding new IP '$IP' to the list $file_name.txt"
+		echo "$IP" >> $file_name.txt
 fi
 
 git add .
