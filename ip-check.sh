@@ -37,7 +37,7 @@ git push origin kikpeni
 echo "Check if s3 bucket '$s3_bucket' exists"
 BUCKET_EXISTS=$(aws s3api head-bucket --bucket $s3_bucket 2>&1 || true)
 if [ -z "$BUCKET_EXISTS" ]; then
-	  echo "Bucket exists"
+	  echo "Bucket 's3_bucket' exists"
   else
 	    echo "Bucket does not exist"
 fi
