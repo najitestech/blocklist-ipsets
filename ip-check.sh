@@ -37,9 +37,10 @@ git push origin kikpeni
 echo "Check if s3 bucket '$s3_bucket' exists"
 BUCKET_EXISTS=$(aws s3api head-bucket --bucket $s3_bucket 2>&1 || true)
 if [ -z "$BUCKET_EXISTS" ]; then
-	  echo "Bucket 's3_bucket' exists"
+	  echo "Bucket 's3_bucket' exists !!!"
   else
-	    echo "Bucket does not exist"
+	    echo "Bucket 's3_bucket' does not exist, Creating it...."
+	    aws s3 mb s3://$s3_bucket
 fi
 #Save a copy of new iplist file to S3 bucket
 echo "Copying $file_name.txt to $s3_bucket"
