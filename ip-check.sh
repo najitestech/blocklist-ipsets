@@ -11,7 +11,7 @@ echo "Pulling repo from GitHub"
 git pull origin kikpeni
 
 #System prompt for IP
-echo "What's the IP ? [ENTER]:"
+echo "What's the IP ?"
 read IP
 
 #System checking if IP is found
@@ -42,6 +42,9 @@ if [ -z "$BUCKET_EXISTS" ]; then
 	    echo "Bucket 's3_bucket' does not exist, Creating it...."
 	    aws s3 mb s3://$s3_bucket
 fi
+
 #Save a copy of new iplist file to S3 bucket
 echo "Copying $file_name.txt to $s3_bucket"
 aws s3 cp $file_name.txt s3://$s3_bucket
+
+success | figlet -f slant
