@@ -11,7 +11,7 @@ echo "Pulling repo from GitHub"
 git pull origin kikpeni
 
 #System prompt for IP
-echo "What's the IP ?"
+echo "What's the IP ? [ENTER]:"
 read IP
 
 #System checking if IP is found
