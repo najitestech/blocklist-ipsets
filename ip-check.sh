@@ -47,4 +47,4 @@ fi
 echo "Copying $file_name.txt to $s3_bucket"
 aws s3 cp $file_name.txt s3://$s3_bucket
 
-success | figlet -f slant
+figlet -f slant success
