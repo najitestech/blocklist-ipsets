@@ -18,6 +18,7 @@ read IP
 if grep $IP * -lR
 then
 	echo "IP Exist in the above file (s)"
+        figlet -f slant success
 	exit
     else
 	        echo "IP not found"
